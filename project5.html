@@ -1,0 +1,249 @@
+<!-- Full HTML with Map --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traditional Indian Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: #fff8e1;
+      background-image: url('https://www.transparenttextures.com/patterns/cream-pixels.png');
+      color: #6b2e19;
+      overflow-x: hidden;
+    }
+    .card-container {
+      max-width: 600px;
+      margin: 50px auto;
+padding: 20px;
+      background: #fff3e0;
+      border: 5px double #d84315;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      position: relative;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .header {
+      font-family: 'Great Vibes', cursive;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #b71c1c;
+    }
+    .mandala {
+      width: 100px;
+      margin-bottom: 15px;
+      animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .invitation-text {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .highlight {
+ font-weight: bold;
+      color: #d84315;
+    }
+    .diya {
+      width: 50px;
+      margin: 10px;
+      animation: flicker 1s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 0.7; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .button {
+      background: #d84315;
+ color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #bf360c;
+    }
+    .hidden {
+      display: none;
+    }
+    .rsvp-form, .guestbook {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .rsvp-form input, .rsvp-form select, .guestbook input, .guestbook textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .rsvp-form button, .guestbook button {
+      background: #4caf50;
+      color: white;
+padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .rsvp-form button:hover, .guestbook button:hover {
+      background: #388e3c;
+    }
+    .slideshow {
+      margin-top: 20px;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slideshow img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slideshow img.active {
+      opacity: 1;
+      position: relative;
+    }
+      .countdown {
+      margin-top: 20px;
+      font-size: 20px;
+      background: #ffccbc;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .print-button {
+      margin-top: 20px;
+      background: #1976d2;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .map-container {
+      margin-top: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>  <div class="card-container">
+    <img src="https://i.ibb.co/5n5zPRh/mandala.png" alt="Mandala" class="mandala">
+<div class="header">Wedding Invitation</div>
+    <div class="countdown" id="countdown"></div>
+    <p class="invitation-text">
+      With the blessings of Almighty and our beloved elders,<br>
+      we cordially invite you to the wedding of our beloved children
+    </p>
+    <p class="invitation-text highlight">Aarav & Meera</p>
+    <p class="invitation-text">
+      on <span class="highlight">Sunday, 12th October 2025</span><br>
+      at <span class="highlight">The Royal Palace, Jaipur</span><br>
+      followed by dinner at 7 PM
+    </p>
+    <div class="buttons">
+      <button class="button" onclick="showBlessings()">Send Blessings</button>
+      <button class="button" onclick="toggleDetails()">View More</button>
+      <button class="print-button" onclick="window.print()">Print Invitation</button>
+</div>
+    <div id="blessings" class="invitation-text hidden">
+      Thank you for your love and blessings. We look forward to seeing you!
+    </div>
+    <div id="details" class="invitation-text hidden">
+      <hr>
+      <p><strong>Contact:</strong><br>
+        Mr. Sharma: +91 9876543210<br>
+        Mrs. Sharma: +91 9123456780</p>
+      <p><strong>Dress Code:</strong> Traditional Indian Attire</p>
+      <div class="rsvp-form">
+        <h3>RSVP</h3>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Contact Number" required>
+        <select>
+          <option value="">Will you attend?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <button onclick="alert('Thank you for your RSVP!')">Submit</button>
+      </div>
+      <div class="guestbook">
+        <h3>Leave Your Blessings</h3>
+        <input type="text" placeholder="Your Name">
+        <textarea rows="3" placeholder="Your Message"></textarea>
+        <button onclick="alert('Your message has been received. Thank you!')">Send</button>
+      </div>
+      <div class="slideshow">
+        <img src="https://i.ibb.co/0Qqj2Pq/slide1.jpg" class="active" alt="Slide 1">
+        <img src="https://i.ibb.co/hW0DnbT/slide2.jpg" alt="Slide 2">
+        <img src="https://i.ibb.co/ZYW3VTp/slide3.jpg" alt="Slide 3">
+      </div>
+      <div class="map-container">
+        <h3>Venue Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.492247489519!2d75.78984537536068!3d26.89458836239411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db4e07e622c65%3A0x8b2a9b300e6b7b8c!2sThe%20Royal%20Palace%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1714722702284!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div>
+      <img src="https://i.ibb.co/tKM3cNf/diya.png" alt="Diya" class="diya">
+<img src="https://i.ibb.co/tKM3cNf/diya.png" alt="Diya" class="diya">
+    </div>
+  </div>  <script>
+    function showBlessings() {
+      document.getElementById('blessings').classList.remove('hidden');
+    }
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      details.classList.toggle('hidden');
+    }
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slideshow img");
+    setInterval(() => {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+      });
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }, 3000);
+const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("2025-10-12T00:00:00").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      if (distance < 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "The Wedding Day Has Arrived!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = $;{days}
+ $:{hours} $:{minutes} $:{seconds}  }, 1000);
+  </script></body>
+</html>

@@ -1,0 +1,178 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  }
+
+header .nav-links a {
+  color: #fff;
+}
+
+header .btn-primary {
+  background: #007BFF;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+  color: #520b7bdc;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.hero .btn-primary {
+  background: #007BFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Features Section */
+.features {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.feature-cards .card {
+  background: #f4f4f4;
+ padding: 1.5rem;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.feature-cards .card i {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 1rem;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.pricing h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.pricing-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pricing-cards .card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.pricing-cards .card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.pricing-cards .card .btn-secondary {
+  background: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* Call-to-Action Section */
+.cta {
+  background: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.cta h2 {
+  font-size: 2rem;
+}
+
+.cta .btn-primary {
+  background: #fff;
+  color: #007BFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .social-links {
+  margin: 1rem 0;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+}
